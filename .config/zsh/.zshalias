@@ -1,0 +1,10 @@
+# Editor
+alias vim=nvim
+
+# ZSH
+alias zshconfig="nvim ~/.config/zsh/.zshrc"
+alias zshalias="nvim ~/.config/zsh/.zshalias"
+alias zshenv="nvim ~/.config/zsh/.zshenv"
+
+# SSH
+alias ssh="TERM=xterm-256color ssh"

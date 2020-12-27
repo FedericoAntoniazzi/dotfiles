@@ -1,0 +1,120 @@
+# --- BSPWM --- #
+# Quit bspwm
+# TODO: Make a polybar script
+super + shift + Escape
+	bspc quit
+
+# Reload bspwm
+super + alt + r
+	bspc wm -r
+
+# --- Windows --- #
+# Close window
+super + shift + q
+	bspc node -c
+
+# Change focus
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# Swap windows
+super + shift + {h,j,k,l}
+	bspc node  -s {west, south,north,east}
+
+# Send window to desktop
+super + shift + {0-9}
+	bspc node -d {0-9}
+
+# Focus on desktop
+super + {0-9}
+	bspc desktop -f {0-9}
+
+# Send window and focus desktop
+super + ctrl + {0-9}
+	~/.config/dotscripts/move-window-and-focus.sh {0-9}
+
+# Set the node flags
+#super + ctrl + {m,x,y,z}
+	#bspc node -g {marked,locked,sticky,private}
+
+# Set the window state
+super + {t,s}
+	bspc node -t {tiled,floating}
+super + f
+	~/.config/dotscripts/toggle-fullscreen.sh
+
+# Monocle layout
+super + m
+	bspc desktop -l next
+
+# Toggle floating on and off
+super + o
+	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# Resize a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Resize a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# --- System --- #
+# Reload sxhkd configs
+super + ctrl + x
+	pkill -USR1 -x sxhkd
+
+# Open app launcher
+super + d
+	dmenu_run
+
+# Open a terminal
+super + Return
+	kitty
+
+# Toggle picom
+super + p
+	~/.config/dotscripts/toggle-program.sh "picom" "-b"
+
+# Launch applications
+super + {F1,F2,F3}
+	{firefox,telegram-desktop,thunar}
+
+super + {F10}
+	~/.config/dotscripts/toggle-wifi.sh
+
+super + {_,shift} + Print
+	flameshot {gui,screen -c}
+
+# Media controls
+XF86AudioRaiseVolume
+	pulsemixer --change-volume +2 --max-volume 100
+
+XF86AudioLowerVolume
+	pulsemixer --change-volume -2
+
+XF86AudioMute
+	pulsemixer --toggle-mute
+
+#XF86AudioPlay
+#    playerctl play-pause
+
+#XF86AudioNext
+#    playerctl next
+
+#XF86AudioPrev
+#    playerctl previous
+
+XF86MonBrightnessUp
+	~/.config/dotscripts/brightness.sh increase
+
+XF86MonBrightnessDown
+	~/.config/dotscripts/brightness.sh decrease

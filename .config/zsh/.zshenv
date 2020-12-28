@@ -9,5 +9,4 @@ export VISUAL="nvim"
 # Golang
 export GO111MODULE="on"
 export GOPATH="$HOME/dev/go"
-export GOBIN="$HOME/dev/go/bin"
-
+export GOBIN="$GOPATH/bin"

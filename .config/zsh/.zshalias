@@ -8,3 +8,29 @@ alias zshenv="nvim ~/.config/zsh/.zshenv"
 
 # SSH
 alias ssh="TERM=xterm-256color ssh"
+
+# Syntactic sugar for ls
+alias ls="lsd"
+alias l="lsd -lh"
+alias ll="lsd -lah"
+alias lls="lsd -Slah"
+alias llsr="lsd -Slahr"
+
+# Shortcuts for tree
+alias tree="lsd --tree"
+alias tree1="lsd --tree --depth 1"
+alias tree2="lsd --tree --depth 2"
+alias tree3="lsd --tree --depth 3"
+alias tree4="lsd --tree --depth 4"
+
+# Golang
+alias gosrc="cd $GOPATH/src/"
+
+# Git
+alias gs="git status"
+alias gl="git log"
+alias glo="git log --oneline"
+
+# Docker
+alias d="docker"
+alias dc="docker-compose"

@@ -14,6 +14,7 @@
 | Terminal | Kitty |
 | Theme | Tokyonight |
 | Shell | Zsh + Powerlevel10k |
+| Compositor | Picom (Jonaburg's fork) |
 
 ## Dotscript
 Dependencies:
@@ -35,5 +36,5 @@ ZSH config files are inside the `.config` folder so make sure to set `$ZDOTDIR` 
 Checkout [my nvim-config repository](https://github.com/FedericoAntoniazzi/nvim-config).
 
 ## Credits
-- ghifarit53 for [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim)
+- [Ghifarit53](https://github.com/ghifarit53) for [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim)
 - A random wallpaper found by chance but I don't know the author

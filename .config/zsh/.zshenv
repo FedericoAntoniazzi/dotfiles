@@ -6,7 +6,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
 # Golang
 export GO111MODULE="on"
 export GOPATH="$HOME/dev/go"
 export GOBIN="$GOPATH/bin"
+
+# Path
+path+=("$GOBIN")
+path+=("$HOME/.config/dotscripts")
+export PATH
+

@@ -97,8 +97,3 @@ export ARCHFLAGS="-arch x86_64"
 # Load aliases
 source $ZDOTDIR/.zshalias
 
-# Path
-path+=("$GOBIN")
-path+=("${HOME}/.config/dotscripts")
-export PATH
-

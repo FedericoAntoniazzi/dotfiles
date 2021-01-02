@@ -5,6 +5,7 @@ bspc rule -r "*"
 
 # --- Autostart --- #
 xrdb ~/.Xresources &
+
 # Set wallpaper
 feh --bg-fill "$HOME/.config/bspwm/wallpaper.jpg"
 
@@ -55,6 +56,6 @@ bspc config gapless_monocle      false
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 #bspc rule -a Chromium desktop='^2'
-#spc rule -a mplayer2 state=floating
-#spc rule -a Kupfer.py focus=on
-#spc rule -a Screenkey manage=off
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off

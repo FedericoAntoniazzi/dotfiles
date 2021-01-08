@@ -78,7 +78,7 @@ super + d
 
 # Open a terminal
 super + Return
-	kitty
+	alacritty
 
 # Toggle picom
 super + p

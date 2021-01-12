@@ -13,6 +13,9 @@ export VISUAL="nvim"
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
+# Dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # Golang
 export GO111MODULE="on"
 export GOPATH="$HOME/dev/go"

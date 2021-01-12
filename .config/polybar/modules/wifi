@@ -1,7 +1,7 @@
 [module/wifi]
 type = internal/network
 
-interface = wlp2s0
+interface = wlo1
 
 accumulate-stats = false
 

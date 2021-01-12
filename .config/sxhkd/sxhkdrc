@@ -78,7 +78,7 @@ super + d
 
 # Open a terminal
 super + Return
-	alacritty
+	kitty
 
 # Toggle picom
 super + p
@@ -118,3 +118,11 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
 	~/.config/dotscripts/brightness.sh decrease
+
+super + ctrl + m 
+	"$HOME"/.config/dotscripts/multimonitor.sh
+
+# Setup monitors
+"$HOME"/.config/dotscripts/multimonitor.sh
+# Setup monitors
+"$HOME"/.config/dotscripts/multimonitor.sh

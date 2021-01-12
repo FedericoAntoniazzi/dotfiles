@@ -8,7 +8,6 @@ xrdb ~/.Xresources &
 
 # Set wallpaper
 feh --bg-fill "$HOME/.config/bspwm/wallpaper.jpg"
-
 # Start picom if dead
 pgrep -x picom > /dev/null || picom -b &
 
@@ -17,9 +16,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Start Polybar
 "$HOME"/.config/dotscripts/launch-polybar.sh &
-
-# --- Monitors --- #
-"$HOME"/.config/dotscripts/multimonitor.sh
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true

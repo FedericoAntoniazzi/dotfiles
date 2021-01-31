@@ -10,6 +10,10 @@ super + shift + Escape
 super + alt + r
 	bspc wm -r
 
+# Lock bspwm
+super + ctrl + l
+	dm-tool lock
+
 #
 # Windows management
 #

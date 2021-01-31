@@ -1,6 +1,8 @@
-# --- BSPWM --- #
+# 
+# bspwm keybindings
+# 
+
 # Quit bspwm
-# TODO: Make a polybar script
 super + shift + Escape
 	bspc quit
 
@@ -8,7 +10,10 @@ super + shift + Escape
 super + alt + r
 	bspc wm -r
 
-# --- Windows --- #
+#
+# Windows management
+#
+
 # Close window
 super + shift + q
 	bspc node -c
@@ -33,23 +38,16 @@ super + {0-9}
 super + ctrl + {0-9}
 	~/.config/dotscripts/move-window-and-focus.sh {0-9}
 
-# Set the node flags
-#super + ctrl + {m,x,y,z}
-	#bspc node -g {marked,locked,sticky,private}
+# Toggle floating
+super + o
+	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
-# Set the window state
-super + {t,s}
-	bspc node -t {tiled,floating}
 super + f
 	~/.config/dotscripts/toggle-fullscreen.sh
 
 # Monocle layout
 super + m
 	bspc desktop -l next
-
-# Toggle floating on and off
-super + o
-	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
 # Swap the current node and the biggest window
 super + g
@@ -67,9 +65,15 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# --- System --- #
+#
+# Apps keybindings
+#
+
+super + ctrl + m 
+	"$HOME"/.config/dotscripts/multimonitor.sh
+
 # Reload sxhkd configs
-super + ctrl + x
+super + Escape
 	pkill -USR1 -x sxhkd
 
 # Open app launcher
@@ -91,6 +95,7 @@ super + {F1,F2,F3}
 super + {F10}
 	~/.config/dotscripts/toggle-wifi.sh
 
+# Take a screenshot
 super + {_,shift} + Print
 	flameshot {gui,screen -c}
 
@@ -104,14 +109,14 @@ XF86AudioLowerVolume
 XF86AudioMute
 	pulsemixer --toggle-mute
 
-#XF86AudioPlay
-#    playerctl play-pause
+XF86AudioPlay
+    playerctl play-pause
 
-#XF86AudioNext
-#    playerctl next
+XF86AudioNext
+    playerctl next
 
-#XF86AudioPrev
-#    playerctl previous
+XF86AudioPrev
+    playerctl previous
 
 XF86MonBrightnessUp
 	~/.config/dotscripts/brightness.sh increase
@@ -119,10 +124,3 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	~/.config/dotscripts/brightness.sh decrease
 
-super + ctrl + m 
-	"$HOME"/.config/dotscripts/multimonitor.sh
-
-# Setup monitors
-"$HOME"/.config/dotscripts/multimonitor.sh
-# Setup monitors
-"$HOME"/.config/dotscripts/multimonitor.sh

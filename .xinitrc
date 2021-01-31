@@ -1,6 +1,9 @@
-export VDPAU_DRIVER=va_gl
-xrdb -I$HOME ~/.Xresources
-xset b off
-setxkbmap it
-numlockx &
+#!/bin/sh
+
+# Source xprofile
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+# Source Xresources
+[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
+
 exec bspwm

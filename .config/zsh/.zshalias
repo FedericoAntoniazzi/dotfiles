@@ -34,3 +34,10 @@ alias glo="git log --oneline"
 # Docker
 alias d="docker"
 alias dc="docker-compose"
+
+# Kubernetes
+alias k="kubectl"
+alias kgp="kubectl get pods"
+
+# Terraform
+alias tf="terraform"

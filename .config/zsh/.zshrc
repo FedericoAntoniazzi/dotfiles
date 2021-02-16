@@ -61,7 +61,13 @@ export UPDATE_ZSH_DAYS=5
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(
+	docker
+	docker-compose
+	kubectl
+	zsh-autosuggestions
+	zsh-completions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +103,6 @@ export ARCHFLAGS="-arch x86_64"
 # Load aliases
 source $ZDOTDIR/.zshalias
 
+source $ZDOTDIR/scripts/kubectl.sh
+
+autoload -U compinit && compinit

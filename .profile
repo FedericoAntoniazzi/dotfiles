@@ -9,7 +9,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # Editor
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL="kitty nvim"
 
 # Docker
 export DOCKER_BUILDKIT=1
@@ -19,7 +19,6 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Golang
-export GO111MODULE="on"
 export GOPATH="$HOME/dev/go"
 export GOBIN="$GOPATH/bin"
 

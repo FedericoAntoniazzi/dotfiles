@@ -4,7 +4,9 @@
 bspc rule -r "*"
 
 # --- Autostart --- #
-xrdb ~/.Xresources &
+xrdb -merge $HOME/.Xresources
+numlockx on
+setxkbmap it
 
 # Set wallpaper
 feh --bg-fill "$HOME/.config/bspwm/wallpaper.jpg"

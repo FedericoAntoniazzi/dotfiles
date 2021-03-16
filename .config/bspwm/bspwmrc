@@ -16,6 +16,9 @@ pgrep -x picom > /dev/null || picom -b &
 # Start sxhkd if dead
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Reload screens
+"$HOME"/.config/dotscripts/multimonitor.sh
+
 # Start Polybar
 "$HOME"/.config/dotscripts/launch-polybar.sh &
 

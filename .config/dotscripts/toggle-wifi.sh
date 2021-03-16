@@ -2,7 +2,7 @@
 
 wifi_status=$(nmcli r wifi)
 
-if [ $wifi_status == "disabled" ]; then 
+if [ "$wifi_status" == "disabled" ]; then 
 	toggle=on
 fi
 

@@ -24,6 +24,7 @@ include-file = ~/.config/polybar/modules/bspwm
 include-file = ~/.config/polybar/modules/window-title
 include-file = ~/.config/polybar/modules/clock
 include-file = ~/.config/polybar/modules/pulseaudio
+include-file = ~/.config/polybar/modules/pulse-mic
 include-file = ~/.config/polybar/modules/eth
 include-file = ~/.config/polybar/modules/wifi
 include-file = ~/.config/polybar/modules/battery
@@ -63,7 +64,7 @@ font-2 = "FiraCode Nerd Font:style=Light,Regular:size=12;1"
 
 modules-left = bspwm left1 window-title left2
 modules-center = 
-modules-right = right5 wifi right4 eth right3 battery right2 pulseaudio right1 clock
+modules-right = right5 wifi right4 eth right3 battery right2 pulseaudio pulse-mic right1 clock
 
 separator =
 spacing = 0

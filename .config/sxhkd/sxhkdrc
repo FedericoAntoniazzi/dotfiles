@@ -113,14 +113,18 @@ XF86AudioLowerVolume
 XF86AudioMute
 	pulsemixer --toggle-mute
 
+# Mic Mute
+shift + XF86AudioMute
+	pulsemixer --id source-1 --toggle-mute
+
 XF86AudioPlay
-    playerctl play-pause
+	playerctl play-pause
 
 XF86AudioNext
-    playerctl next
+	playerctl next
 
 XF86AudioPrev
-    playerctl previous
+	playerctl previous
 
 XF86MonBrightnessUp
 	~/.config/dotscripts/brightness.sh increase

@@ -62,8 +62,10 @@ export UPDATE_ZSH_DAYS=5
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	aws
 	docker
 	docker-compose
+	fzf
 	kubectl
 	zsh-autosuggestions
 	zsh-completions

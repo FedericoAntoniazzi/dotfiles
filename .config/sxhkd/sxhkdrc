@@ -94,7 +94,7 @@ super + p
 
 # Launch applications
 super + {F1,F2,F3}
-	{firefox,telegram-desktop,thunar}
+	{firefox,telegram-desktop,pcmanfm}
 
 super + {F10}
 	~/.config/dotscripts/toggle-wifi.sh

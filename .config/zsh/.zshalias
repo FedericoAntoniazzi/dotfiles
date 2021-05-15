@@ -37,7 +37,14 @@ alias dc="docker-compose"
 
 # Kubernetes
 alias k="kubectl"
+alias kapp="kubectl apply"
+alias kappf="kubectl apply -f"
 alias kgp="kubectl get pods"
+alias kgsvc="kubectl get services"
+alias kgdep="kubectl get deployments"
+
+alias kctx="kubectx"
+alias kns="kubens"
 
 # Terraform
 alias tf="terraform"

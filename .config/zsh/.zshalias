@@ -27,8 +27,10 @@ alias tree4="lsd --tree --depth 4"
 alias gosrc="cd $GOPATH/src/"
 
 # Git
+alias gd="git diff"
 alias gs="git status"
 alias gl="git log"
+alias glg="git log --graph"
 alias glo="git log --oneline"
 
 # Docker

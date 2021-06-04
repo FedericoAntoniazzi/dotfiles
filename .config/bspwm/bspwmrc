@@ -16,6 +16,9 @@ pgrep -x picom > /dev/null || picom -b &
 # Start sxhkd if dead
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Start dunst if dead
+pgrep -x dunst > /dev/null || dunst &
+
 # Reload screens
 "$HOME"/.config/dotscripts/multimonitor.sh
 

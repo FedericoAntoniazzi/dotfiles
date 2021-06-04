@@ -28,10 +28,13 @@ alias gosrc="cd $GOPATH/src/"
 
 # Git
 alias gd="git diff"
+alias gds="git diff --staged"
 alias gs="git status"
 alias gl="git log"
 alias glg="git log --graph"
 alias glo="git log --oneline"
+alias gck="git checkout"
+alias gckb="git checkout -b"
 
 # Docker
 alias d="docker"

@@ -24,4 +24,7 @@ source $ZDOTDIR/.zshalias
 # Initialize oh-my-zsh related things
 source $ZDOTDIR/.ohmyzsh
 
+# Load custom functions
+source $ZDOTDIR/custom-functions.sh
+
 autoload -U compinit && compinit

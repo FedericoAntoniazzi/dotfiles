@@ -3,6 +3,7 @@ alias vim=nvim
 
 # ZSH
 alias zshconfig="nvim ~/.config/zsh/.zshrc"
+alias zshfunctions="nvim ~/.config/zsh/custom-functions.sh"
 alias zshalias="nvim ~/.config/zsh/.zshalias"
 alias zshenv="nvim ~/.config/zsh/.zshenv"
 
@@ -26,7 +27,13 @@ alias tree4="lsd --tree --depth 4"
 # Golang
 alias gosrc="cd $GOPATH/src/"
 
+# Python
+alias py="python"
+
 # Git
+alias ga="git add"
+alias gc="git commit"
+alias gcm="git commit --amend"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gs="git status"
@@ -38,15 +45,23 @@ alias gckb="git checkout -b"
 
 # Docker
 alias d="docker"
+alias dcl="docker container ls"
+alias dvl="docker volume ls"
+alias dil="docker image ls"
+alias dnl="docker network ls"
 alias dc="docker-compose"
 
 # Kubernetes
 alias k="kubectl"
-alias kapp="kubectl apply"
-alias kappf="kubectl apply -f"
+alias ka="kubectl apply"
+alias kaf="kubectl apply -f"
+alias kg="kubectl get"
 alias kgp="kubectl get pods"
-alias kgsvc="kubectl get services"
-alias kgdep="kubectl get deployments"
+alias kgs="kubectl get services"
+alias kgd="kubectl get deployments"
+alias kd="kubectl describe"
+alias kdp="kubectl describe pod"
+alias kdd="kubectl describe deployment"
 
 alias kctx="kubectx"
 alias kns="kubens"

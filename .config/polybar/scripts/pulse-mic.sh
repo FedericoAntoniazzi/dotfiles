@@ -2,13 +2,14 @@
 # https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/pulseaudio-microphone
 
 status() {
-  MUTED=$(pacmd list-sources | awk '/\*/,EOF {print}' | awk '/muted/ {print $2; exit}')
+    DEFAULT_SOURCE=$(pactl info | grep "Default Source" | cut -d ' ' -f3)
+    MUTED=$(pactl list sources | grep "Name: $DEFAULT_SOURCE" -A 6 | grep Mute | cut -d ' ' -f2)
 
-  if [ "$MUTED" = "yes" ]; then
-    echo ""
-  else
-    echo ""
-  fi
+    if [ "$MUTED" = "yes" ]; then
+        echo ""
+    else
+        echo ""
+    fi
 }
 
 listen() {
@@ -22,14 +23,14 @@ listen() {
 }
 
 toggle() {
-  MUTED=$(pacmd list-sources | awk '/\*/,EOF {print}' | awk '/muted/ {print $2; exit}')
-  DEFAULT_SOURCE=$(pacmd list-sources | awk '/\*/,EOF {print $3; exit}')
+    DEFAULT_SOURCE=$(pactl info | grep "Default Source" | cut -d ' ' -f3)
+    MUTED=$(pactl list sources | grep "Name: $DEFAULT_SOURCE" -A 6 | grep Mute | cut -d ' ' -f2)
 
-  if [ "$MUTED" = "yes" ]; then
-      pacmd set-source-mute "$DEFAULT_SOURCE" 0
-  else
-      pacmd set-source-mute "$DEFAULT_SOURCE" 1
-  fi
+    if [ "$MUTED" = "yes" ]; then
+        pactl set-source-mute "$DEFAULT_SOURCE" 0
+    else
+        pactl set-source-mute "$DEFAULT_SOURCE" 1
+    fi
 }
 
 case "$1" in

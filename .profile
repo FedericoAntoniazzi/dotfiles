@@ -1,7 +1,8 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"  
 export QT_STYLE_OVERRIDE="kvantum"
 
-export VDPAU_DRIVER=va_gl
+#export LIBVA_DRIVER_NAME="i965"
+#export VDPAU_DRIVER=va_gl
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

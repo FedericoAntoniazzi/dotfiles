@@ -49,6 +49,13 @@ super + o
 super + f
 	~/.config/dotscripts/toggle-fullscreen.sh
 
+# Rotate windows
+super + r
+	bspc node @/ --rotate 90
+
+super + shift + r
+	bspc node @/ --rotate 270
+
 # Monocle layout
 super + m
 	bspc desktop -l next

@@ -8,8 +8,12 @@ xrdb -merge $HOME/.Xresources
 numlockx on
 setxkbmap it
 
+# Reload screens
+"$HOME"/.config/dotscripts/multimonitor.sh
+
 # Set wallpaper
 feh --bg-fill "$HOME/.config/bspwm/wallpaper.jpg"
+
 # Start picom if dead
 pgrep -x picom > /dev/null || picom -b &
 
@@ -18,9 +22,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Start dunst if dead
 pgrep -x dunst > /dev/null || dunst &
-
-# Reload screens
-"$HOME"/.config/dotscripts/multimonitor.sh
 
 # Start Polybar
 "$HOME"/.config/dotscripts/launch-polybar.sh &
@@ -54,7 +55,7 @@ bspc config border_width         2
 bspc config window_gap          10
 
 # Modes
-bspc config split_ratio          0.52
+bspc config split_ratio          0.50
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 

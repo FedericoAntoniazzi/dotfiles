@@ -28,3 +28,6 @@ source $ZDOTDIR/.ohmyzsh
 source $ZDOTDIR/custom-functions.sh
 
 autoload -U compinit && compinit
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

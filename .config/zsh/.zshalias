@@ -24,6 +24,10 @@ alias tree2="lsd --tree --depth 2"
 alias tree3="lsd --tree --depth 3"
 alias tree4="lsd --tree --depth 4"
 
+# Copy
+# Confirm before overwriting something
+alias cp="cp -i"
+
 # Golang
 alias gosrc="cd $GOPATH/src/"
 
@@ -71,6 +75,9 @@ alias vg="vagrant"
 alias vgu="vagrant up"
 alias vgd="vagrant destroy"
 alias vgssh="TERM='xterm-256color' vagrant ssh"
+
+# Termbin
+alias termbin="nc termbin.com 9999"
 
 # Terraform
 alias tf="terraform"

@@ -6,7 +6,7 @@ bspc rule -r "*"
 # --- Autostart --- #
 xrdb -merge $HOME/.Xresources
 numlockx on
-setxkbmap it
+setxkbmap us -option compose:ralt
 
 # Reload screens
 "$HOME"/.config/dotscripts/multimonitor.sh

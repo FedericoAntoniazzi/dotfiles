@@ -8,7 +8,7 @@ alias zshalias="nvim ~/.config/zsh/.zshalias"
 alias zshenv="nvim ~/.config/zsh/.zshenv"
 
 # SSH
-alias ssh="TERM=xterm-256color ssh"
+alias ssh="kitty +kitten ssh"
 
 # Syntactic sugar for ls
 alias ls="lsd"
@@ -27,12 +27,14 @@ alias tree4="lsd --tree --depth 4"
 # Copy
 # Confirm before overwriting something
 alias cp="cp -i"
+alias mv="mv -i"
 
 # Golang
 alias gosrc="cd $GOPATH/src/"
 
 # Python
 alias py="python"
+alias pipsh="pipenv shell"
 
 # Git
 alias ga="git add"
@@ -46,6 +48,8 @@ alias glg="git log --graph"
 alias glo="git log --oneline"
 alias gck="git checkout"
 alias gckb="git checkout -b"
+alias gp="git push"
+alias gpo="git push origin"
 
 # Docker
 alias d="docker"

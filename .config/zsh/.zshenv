@@ -4,8 +4,14 @@ export ZDOTDIR=~/.config/zsh
 export QT_QPA_PLATFORMTHEME="qt5ct"  
 export QT_STYLE_OVERRIDE="kvantum"
 
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
 # SSH Auth sock for unlocking ssh keys only when keepassxc db is unlocked
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -33,4 +39,5 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Export PATH
 typeset -U PATH path
 path=("$path[@]" "$GOBIN" "$HOME/.cargo/bin")
+path=("$path[@]" "$HOME/.local/share/jetbrains")
 export PATH

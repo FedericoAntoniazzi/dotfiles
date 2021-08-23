@@ -5,29 +5,41 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# cd without using cd
+setopt autocd
+# Allow using regex with *
+setopt extendedglob
+# Sort filenames numerically
+setopt numericglobsort
+# Do not beep
+setopt nobeep
+# Remove newer commands if duplicates
+# setopt histignorealldups
 
 # Load aliases
 source $ZDOTDIR/.zshalias
-
 # Initialize oh-my-zsh related things
 source $ZDOTDIR/.ohmyzsh
-
 # Load custom functions
 source $ZDOTDIR/custom-functions.sh
 
-autoload -U compinit && compinit
+# Setup completion
+zstyle :compinstall filename "$HOME/.config/zsh/.zshrc"
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+# setopt COMPLETE_ALIASES
+
+# Set vim keybindings
+bindkey -v
+
+# Map Ctrl=a to move at the begging of line
+bindkey "^A" beginning-of-line
+# Map Ctrl=e to move at the end of line
+bindkey "^E" end-of-line
+# Map Ctrl=b to move to the previous word
+bindkey "^B" backward-word
+# Map Ctrl=f to move to the next word
+bindkey "^F" forward-word
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

@@ -1,0 +1,51 @@
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = BAT0
+adapter = ADP1
+
+poll-interval = 5
+
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.shade3}
+format-charging-foreground = ${color.black}
+format-charging-padding = 1
+format-charging-prefix = " "
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.shade3}
+format-discharging-foreground = ${color.black}
+format-discharging-padding = 1
+format-discharging-prefix = " "
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+
+label-full = "%{T3}%{T-} %percentage%%"
+label-full-background = ${color.shade3}
+label-full-foreground = ${color.black}
+label-full-padding = 1
+
+ramp-capacity-0 = "%{T3}%{T-}"
+ramp-capacity-1 = "%{T3}%{T-}"
+ramp-capacity-2 = "%{T3}%{T-}"
+ramp-capacity-3 = "%{T3}%{T-}"
+ramp-capacity-4 = "%{T3}%{T-}"
+ramp-capacity-5 = "%{T3}%{T-}"
+ramp-capacity-6 = "%{T3}%{T-}"
+ramp-capacity-7 = "%{T3}%{T-}"
+ramp-capacity-8 = "%{T3}%{T-}"
+ramp-capacity-9 = "%{T3}%{T-}"
+
+animation-charging-0 = "%{T3} %{T-}"
+animation-charging-1 = "%{T3} %{T-}"
+animation-charging-2 = "%{T3} %{T-}"
+animation-charging-3 = "%{T3} %{T-}"
+animation-charging-4 = "%{T3} %{T-}"
+animation-charging-5 = "%{T3} %{T-}"
+
+animation-charging-framerate = 1000

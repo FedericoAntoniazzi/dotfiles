@@ -1,3 +1,4 @@
 xset b off
 setxkbmap it
 numlockx on
+setxkbmap us -option compose:ralt

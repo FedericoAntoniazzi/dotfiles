@@ -51,6 +51,12 @@ alias gckb="git checkout -b"
 alias gp="git push"
 alias gpo="git push origin"
 
+# Yadm
+alias ya="yadm add"
+alias ys="yadm status"
+alias yd="yadm diff"
+alias yds="yadm diff --staged"
+
 # Docker
 alias d="docker"
 alias dcl="docker container ls"

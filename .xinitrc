@@ -5,7 +5,6 @@ xrandr
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 # Source Xresources
-[ -f ~/.Xresources ] && xrdb -merge -I$HOME ~/.Xresources
-xsetroot -cursor_name left_ptr &
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 
 exec bspwm

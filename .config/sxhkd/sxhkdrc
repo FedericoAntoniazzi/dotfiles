@@ -1,141 +1,116 @@
-# 
-# bspwm keybindings
-# 
-
-# Quit bspwm
+#
+# General
+#
+# Lockscreen
+super + alt + Escape
+	dm-tool lock
+# Run terminal
+super + Return
+	kitty
+# App launcher
+super + d
+	dmenu_run
+# Reload sxhkd configuration
+super + Escape
+	pkill -USR1 -x sxhkd
+# Restart bspwm
 super + shift + Escape
-	bspc quit
-
-# Reload bspwm
-super + alt + r
 	bspc wm -r
 
-# Lock bspwm
-super + ctrl + l
-	dm-tool lock
-
 #
-# Windows management
+# Bspwm hotkeys
 #
-
 # Close window
 super + shift + q
 	bspc node -c
+# Set the window state
+super + {t,shift + t,s,f}
+    bspc node -t '~{tiled,pseudo_tiled,floating,fullscreen}'
+# Set the node flags
+super + ctrl + {m,x,s,z}
+    bspc node -g {marked,locked,sticky,private}
+# Alternate between the tiled and monocle layout
+super + shift + f
+	bspc desktop -l next
+# Balance nodes
+super + b
+	bspc node @/ -B
 
+#
+# Bspwm windows
+#
 # Change focus
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
-
 # Swap windows
 super + shift + {h,j,k,l}
-	bspc node  -s {west, south,north,east}
+	bspc node -s {west, south,north,east}
+# Rotate windows
+super + r
+     bspc node @/ -R 90
+# Swap the current node and the biggest node
+super + g
+    bspc node -s biggest.local
+# Expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# Contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# Move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# Send window to desktop
-super + shift + {0-9}
-	bspc node -d {0-9}
-
+#
+# Bspwm desktops
+#
 # Focus on desktop
 super + {0-9}
 	bspc desktop -f {0-9}
-
-# Send window and focus desktop
+# Send window to desktop
+super + shift + {0-9}
+	bspc node -d {0-9}
+# Send window to desktop and move focus
 super + ctrl + {0-9}
-	~/.config/dotscripts/move-window-and-focus.sh {0-9}
-
-# Toggle floating
-super + o
-	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
-
-super + f
-	~/.config/dotscripts/toggle-fullscreen.sh
-
-# Rotate windows
-super + r
-	bspc node @/ --rotate 90
-
-super + shift + r
-	bspc node @/ --rotate 270
-
-# Monocle layout
-super + m
-	bspc desktop -l next
-
-# Swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
-# Resize a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# Resize a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+	bspc node -d {0-9} --follow
 
 #
-# Apps keybindings
+# Applications
 #
-
-super + ctrl + m 
-	"$HOME"/.config/dotscripts/multimonitor.sh
-
-# Reload sxhkd configs
-super + Escape
-	pkill -USR1 -x sxhkd
-
-# Open app launcher
-super + d
-	dmenu_run
-
-# Open a terminal
-super + Return
-	kitty
-
 # Toggle picom
 super + p
-	~/.config/dotscripts/toggle-program.sh "picom" "-b"
+	~/.config/dotscripts/toggle-program.sh "picom" "-b" "--experimental-backends"
 
 # Launch applications
 super + {F1,F2,F3}
 	{firefox,telegram-desktop,pcmanfm}
+super + shift + F1
+	keepassxc
 
 super + {F10}
 	~/.config/dotscripts/toggle-wifi.sh
 
 # Take a screenshot
-super + {_,shift} + Print
+{_,super} + Print
 	flameshot {gui,screen -c}
 
 # Media controls
 XF86AudioRaiseVolume
 	pulsemixer --change-volume +2 --max-volume 100
-
 XF86AudioLowerVolume
 	pulsemixer --change-volume -2
-
 XF86AudioMute
 	pulsemixer --toggle-mute
-
 # Mic Mute
 shift + XF86AudioMute
 	pulsemixer --id source-1 --toggle-mute
-
+# Audio controls
 XF86AudioPlay
 	playerctl play-pause
-
 XF86AudioNext
 	playerctl next
-
 XF86AudioPrev
 	playerctl previous
-
-XF86MonBrightnessUp
-	~/.config/dotscripts/brightness.sh increase
-
-XF86MonBrightnessDown
-	~/.config/dotscripts/brightness.sh decrease
-
+# Brightness controls
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	brightnessctl s 2%{+,-} > /dev/null

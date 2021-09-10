@@ -19,3 +19,12 @@ pacqi () {
 	fi
 	pacman -Qi $(pacman -Qsq $@ | fzf)
 }
+
+bak () {
+	if [ $# -ne 1 ]; then
+		echo "Provide only 1 argument"
+		echo "Usage: bak <package>"
+		return 1
+	fi
+	cp "$1" "$1".bak
+}

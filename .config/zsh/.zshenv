@@ -20,7 +20,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # Editor
 export EDITOR="nvim"
-export VISUAL="kitty nvim"
+export VISUAL="nvim"
 
 # Docker
 export DOCKER_BUILDKIT=1

@@ -1,6 +1,9 @@
 # Editor
 alias vim=nvim
 
+# Ranger
+alias r=ranger
+
 # ZSH
 alias zshconfig="nvim ~/.config/zsh/.zshrc"
 alias zshfunctions="nvim ~/.config/zsh/custom-functions.sh"

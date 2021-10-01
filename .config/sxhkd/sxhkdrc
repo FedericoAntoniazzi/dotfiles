@@ -2,18 +2,15 @@
 # General
 #
 # Lockscreen
-super + alt + Escape
+super + BackSpace
 	dm-tool lock
 # Run terminal
 super + Return
 	kitty
-# App launcher
-super + d
-	dmenu_run
 # Reload sxhkd configuration
 super + Escape
 	pkill -USR1 -x sxhkd
-# Restart bspwm
+# Reload bspwm configuration
 super + shift + Escape
 	bspc wm -r
 
@@ -35,6 +32,9 @@ super + shift + f
 # Balance nodes
 super + b
 	bspc node @/ -B
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
 
 #
 # Bspwm windows
@@ -53,10 +53,10 @@ super + g
     bspc node -s biggest.local
 # Expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 # Contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 # Move a floating window
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
@@ -77,19 +77,24 @@ super + ctrl + {0-9}
 #
 # Applications
 #
+# App launcher
+super + d
+	dmenu_run
+# Terminal file explorer
+super + v
+	kitty ranger
 # Toggle picom
 super + p
 	~/.config/dotscripts/toggle-program.sh "picom" "-b" "--experimental-backends"
-
 # Launch applications
 super + {F1,F2,F3}
 	{firefox,telegram-desktop,pcmanfm}
+# Launch password manager
 super + shift + F1
 	keepassxc
-
+# Toggle WiFi
 super + {F10}
 	~/.config/dotscripts/toggle-wifi.sh
-
 # Take a screenshot
 {_,super} + Print
 	flameshot {gui,screen -c}

@@ -1,7 +1,7 @@
 [module/eth]
 type = internal/network
 
-interface = enp0s20f0u4u1
+interface = enp3s0
 
 interval = 5.0
 format-connected = <label-connected>

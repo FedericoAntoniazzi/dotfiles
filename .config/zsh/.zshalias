@@ -51,8 +51,8 @@ alias glg="git log --graph"
 alias glo="git log --oneline"
 alias gck="git checkout"
 alias gckb="git checkout -b"
-alias gp="git push"
-alias gpo="git push origin"
+alias gsw="git switch"
+alias gswc="git switch --create"
 
 # Yadm
 alias ya="yadm add"
@@ -66,7 +66,7 @@ alias dcl="docker container ls"
 alias dvl="docker volume ls"
 alias dil="docker image ls"
 alias dnl="docker network ls"
-alias dc="docker-compose"
+alias dc="docker compose"
 
 # Kubernetes
 alias k="kubectl"

@@ -26,6 +26,22 @@ bak () {
 }
 
 
+aur-install () {
+	if [ $# -ne 1 ]; then
+		echo "aur-install needs 1 argument: repository URL"
+		echo "Usage: aur-install <package>"
+		return 1
+	fi
+	package_name="$1"
+	repo_dir="$HOME/dev/aur/$1"
+
+	git clone "https://aur.archlinux.org/$1.git" "${repo_dir}" && \
+		cd "${repo_dir}" &&
+		extra-x86_64-build -c && \
+		sudo pacman -U *.pkg.tar.zst --needed && \
+		git clean -d -f
+}
+
 aur-update () {
 	pull_status=$(git pull 2>&1)
 	package_name=$(basename $PWD)

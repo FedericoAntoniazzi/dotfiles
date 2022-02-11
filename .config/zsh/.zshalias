@@ -38,6 +38,7 @@ alias gosrc="cd $GOPATH/src/"
 # Python
 alias py="python"
 alias pipsh="pipenv shell"
+alias ipy="ipython --ext='autotime'"
 
 # Git
 alias ga="git add"
@@ -53,6 +54,7 @@ alias gck="git checkout"
 alias gckb="git checkout -b"
 alias gsw="git switch"
 alias gswc="git switch --create"
+alias gsh="git show"
 
 # Yadm
 alias ya="yadm add"
@@ -88,6 +90,15 @@ alias vg="vagrant"
 alias vgu="vagrant up"
 alias vgd="vagrant destroy"
 alias vgssh="TERM='xterm-256color' vagrant ssh"
+
+# Ansible
+alias a="ansible"
+alias ap="ansible-playbook"
+alias ac="ansible-config"
+alias av="ansible-vault"
+alias ag="ansible-galaxy"
+alias adoc="ansible-doc"
+alias mol="molecule"
 
 # Termbin
 alias termbin="nc termbin.com 9999"

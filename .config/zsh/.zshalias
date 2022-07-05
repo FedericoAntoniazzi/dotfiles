@@ -1,0 +1,51 @@
+# Editor
+alias vim=nvim
+
+# Calendar
+alias cal="cal --monday"
+
+# File management
+# Confirm before overwriting something
+alias cp="cp -i"
+alias mv="mv -i"
+
+# Git
+alias ga="git add"
+alias gc="git commit"
+alias gcam="git commit --amend"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gs="git status"
+alias gl="git log"
+alias glg="git log --graph"
+alias glo="git log --oneline"
+alias gsw="git switch"
+alias gswc="git switch --create"
+alias gsh="git show"
+
+# Yadm
+alias ya="yadm add"
+alias yc="yadm commit"
+alias ycam="yadm commit --amend"
+alias yd="yadm diff"
+alias yds="yadm diff --staged"
+alias ys="yadm status"
+alias yl="yadm log"
+alias ylg="yadm log --graph"
+alias ylo="yadm log --oneline"
+alias ysw="yadm switch"
+alias yswc="yadm switch --create"
+alias ysh="yadm show"
+
+# Ls sugar
+alias ls="lsd"
+alias l="lsd -lh"
+alias ll="lsd -lah"
+alias lls="lsd -Slah"
+alias llsr="lsd -Slahr"
+alias tree="lsd --tree"
+
+# ZSH Utilities
+alias zshconfig="$EDITOR $ZDOTDIR/.zshrc"
+alias zshenv="$EDITOR $ZDOTDIR/.zshenv"
+alias zshalias="$EDITOR $ZDOTDIR/.zshalias"

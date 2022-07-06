@@ -9,6 +9,3 @@ if [ "$os" = "arch" ]; then
 	echo "Make sure nice-to-have packages are installed"
 	sudo pacman -Syu --needed pacman-contrib neovim lsd openssh
 fi
-
-echo "Generating a new SSH identity"
-ssh-keygen -t ed25519 -C "FedericoAntoniazzi"

@@ -1,0 +1,9 @@
+# vim: set ft=i3config
+
+# Set default keyboard layout and options
+input * {
+    xkb_layout "us"
+    xkb_options "compose:ralt,caps:escape_shifted_capslock"
+}
+
+input * xkb_numlock enable

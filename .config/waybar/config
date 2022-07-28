@@ -1,0 +1,82 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+	"sway/mode",
+	"tray"
+    ],
+
+    "modules-center": [
+	"sway/workspaces",
+    ],
+
+    "modules-right": [
+	// "tray",
+	"battery",
+	"backlight",
+	"pulseaudio",
+	"network",
+	"clock",
+    ],
+
+    "sway/workspaces": {
+	"disable-scroll": true,
+	"disable-click": true,
+	"format": "{name}"
+    },
+
+    "backlight": {
+	"format": "{icon} {percent}%",
+	"format-icons": ["", "", "", "", "", "", ""],
+	"interval": 5
+    },
+
+    "clock": {
+	"format": "{: %I:%M %p   %d/%m/%Y}"
+    },
+
+    "battery": {
+	"states": {
+	    "good": 95,
+	    "warning": 20,
+	    "critical": 10
+	},
+	"format": "{icon}  {capacity}%",
+	"format-charging": " {capacity}%",
+	"format-plugged": " {capacity}%",
+	"format-alt": "{time} {icon}",
+	"format-icons": ["", "", "", "", ""],
+	"interval": 5
+    },
+    
+    "network": {
+	"tooltip": false,
+	"format-wifi": "{icon} {essid} {ipaddr}",
+	"format-ethernet": "{icon} {ipaddr}",
+	"format-disconnected": "Disconnected",
+	"format-icons": {
+	    "ethernet": "",
+	    "wifi": "直"
+	}
+    },
+
+    "pulseaudio": {
+	"tooltip": false,
+	"scroll-step": 5,
+	"format": "{icon} {volume}%",
+	"format-muted": "{icon} {volume}%",
+	"format-bluetooth": " {icon} {volume}%",
+	"format-icons": {
+	    "headset": "",
+	    "headphone": "",
+	    "hands-free": "",
+	    "default": ["奄", "奔", "墳"],
+	},
+	"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    },
+
+    "sway/mode": {
+	"format": " {}"
+    }
+}

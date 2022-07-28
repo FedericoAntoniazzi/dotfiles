@@ -1,0 +1,15 @@
+[submodule "powerlevel10k"]
+	path = /home/federico/.config/omz/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh-autosuggestions"]
+	path = /home/federico/.config/omz/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh-completions"]
+	path = /home/federico/.config/omz/custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "zsh-history-substring-search"]
+	path = /home/federico/.config/omz/custom/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "zsh-syntax-highlighting"]
+	path = /home/federico/.config/omz/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

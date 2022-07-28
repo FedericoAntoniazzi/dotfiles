@@ -1,5 +1,5 @@
 # Editor
-alias vim=nvim
+# alias vim=nvim
 
 # Calendar
 alias cal="cal --monday"

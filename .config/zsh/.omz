@@ -1,0 +1,25 @@
+CASE_SENSITIVE="false"
+
+# _ and - are interchangeable
+HYPHEN_INSENSITIVE="true"
+
+# Update without prompting
+DISABLE_UPDATE_PROMPT="true"
+
+# How often to auto update (in days)
+export UPDATE_ZSH_DAY=5
+
+# Enable command correction
+ENABLE_CORRECTION="true"
+
+# Load plugins
+plugins=(
+    zsh-autosuggestions
+    zsh-history-substring-search
+    zsh-syntax-highlighting
+)
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# Source Oh My ZSH
+source $ZSH/oh-my-zsh.sh

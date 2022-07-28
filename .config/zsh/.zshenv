@@ -21,9 +21,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Set Qt to use the wayland backend
 export QT_QPA_PLATFORM=wayland
 
-# Set current desktop
-export XDG_CURRENT_DESKTOP=sway
-
 # Add paths to PATH
 typeset -U PATH path
 path=("$path[@]" "/usr/share/bcc/tools")

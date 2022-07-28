@@ -5,8 +5,13 @@
 #
 
 # class                 border	bground	text	indicator   child_border
-client.focused		#313244	#313244	#cdd6f4	#313244	    #313244
-client.focused_inactive	#1e1e2e	#1e1e2e	#bac2de	#1e1e2e	    #1e1e2e
+client.focused		#313244	#313244	#cdd6f4	#44bb9f	    #44bb9f
+client.focused_inactive	#207667 #207667 #bac2de	#297060     #297060
 client.unfocused	#181825	#181825	#a6adc8	#181825	    #181825
 client.urgent		#f38ba8	#f38ba8	#1e1e2e	#f38ba8	    #f38ba8
 client.background	#1e1e2e
+
+default_border pixel
+default_floating_border pixel
+
+gaps inner 5

@@ -6,6 +6,11 @@ echo "Done!"
 
 os=$(cat /etc/os-release | grep "^ID=" | cut -d "=" -f 2)
 if [ "$os" = "arch" ]; then
-	echo "Make sure nice-to-have packages are installed"
-	sudo pacman -Syu --needed pacman-contrib neovim lsd openssh
+    echo "Make sure nice-to-have packages are installed"
+    sudo pacman -Syu --needed pacman-contrib lsd openssh
+fi
+
+read -rp "Install WM related packages? [Y/n]" option_install_wm_packages
+if [ "$option_install_wm_packages" = "y" ]; then
+    sudo pacman -Syu sway swaybg waybar wofi swappy slurp grim foot
 fi

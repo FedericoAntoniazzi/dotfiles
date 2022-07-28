@@ -48,13 +48,17 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^B" backward-word
 bindkey "^F" forward-word
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
+# Load VIM shortcuts
+source $ZDOTDIR/.zshrc_vi
 # Load aliases
 source $ZDOTDIR/.zshalias
-# Load VIM binding configuration
-source $ZDOTDIR/.zshrc_vi
-# Load ZSH plugins
-source $ZDOTDIR/.zshrc_plugins
+# Load Oh My ZSH
+source $ZDOTDIR/.omz
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

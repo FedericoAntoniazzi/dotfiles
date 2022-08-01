@@ -22,6 +22,9 @@ set $secondary_display "eDP-1"
 
 exec swaymsg focus output $primary_display
 
+output $primary_display pos 0 0
+output $secondary_display pos 2560 360
+
 ### Wallpaper
 output * bg ~/.config/sway/wallpapers/cat-sound.png fill
 

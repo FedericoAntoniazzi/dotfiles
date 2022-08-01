@@ -5,3 +5,5 @@ bindsym $mod+F2 exec telegram-desktop
 bindsym $mod+Shift+F1 exec keepassxc
 
 bindsym Print exec bash -c 'grim -g "$(slurp)" - | swappy -f -'
+
+for_window [name="KeePassXC -  Access Request"] floating enable

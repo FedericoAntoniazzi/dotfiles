@@ -13,3 +13,6 @@
 [submodule "zsh-syntax-highlighting"]
 	path = /home/federico/.config/omz/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "neovim"]
+	path = /home/federico/.config/nvim
+	url = https://github.com/FedericoAntoniazzi/nvim-config

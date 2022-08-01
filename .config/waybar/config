@@ -4,7 +4,6 @@
 
     "modules-left": [
 	"sway/mode",
-	"tray"
     ],
 
     "modules-center": [
@@ -65,13 +64,13 @@
 	"tooltip": false,
 	"scroll-step": 5,
 	"format": "{icon} {volume}%",
-	"format-muted": "{icon} {volume}%",
+	"format-muted": "婢 {volume}%",
 	"format-bluetooth": " {icon} {volume}%",
 	"format-icons": {
 	    "headset": "",
 	    "headphone": "",
 	    "hands-free": "",
-	    "default": ["奄", "奔", "墳"],
+	    "default": ["奄", "奔", "奔", "墳", "墳"],
 	},
 	"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
     },

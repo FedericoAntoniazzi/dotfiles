@@ -64,7 +64,7 @@
 	"tooltip": false,
 	"scroll-step": 5,
 	"format": "{icon} {volume}%",
-	"format-muted": "婢 {volume}%",
+	"format-muted": "婢",
 	"format-bluetooth": " {icon} {volume}%",
 	"format-icons": {
 	    "headset": "",

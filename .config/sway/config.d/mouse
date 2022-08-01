@@ -1,4 +1,0 @@
-input type:mouse {
-	accel_profile adaptive
-	pointer_accel 0
-}

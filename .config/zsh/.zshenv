@@ -3,6 +3,9 @@ export ZDOTDIR=~/.config/zsh
 export ZSH=~/.config/omz
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# GPG
+export GPG_TTY=$(tty)
+
 # XDG Dirs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

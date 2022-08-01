@@ -1,3 +1,4 @@
+# vim: ft=i3config
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec telegram-desktop
 

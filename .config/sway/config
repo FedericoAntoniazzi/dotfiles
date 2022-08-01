@@ -16,6 +16,12 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu wofi --show=drun --lines=10 --prompt=""
 
+# Configure different monitors in the setup
+set $primary_display "HDMI-A-1"
+set $secondary_display "eDP-1"
+
+exec swaymsg focus output $primary_display
+
 ### Wallpaper
 output * bg ~/.config/sway/wallpapers/cat-sound.png fill
 
@@ -86,6 +92,17 @@ output * bg ~/.config/sway/wallpapers/cat-sound.png fill
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
+
+    workspace 1 output $primary_display
+    workspace 2 output $primary_display
+    workspace 3 output $primary_display
+    workspace 4 output $primary_display
+    workspace 5 output $primary_display
+    workspace 6 output $primary_display
+    workspace 7 output $primary_display
+    workspace 8 output $secondary_display
+    workspace 9 output $secondary_display
+    workspace 10 output $secondary_display
 
 #
 # Layout stuff:

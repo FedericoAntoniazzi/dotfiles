@@ -53,12 +53,12 @@ bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+# Load Oh My ZSH
+source $ZDOTDIR/.omz
 # Load VIM shortcuts
 source $ZDOTDIR/.zshrc_vi
 # Load aliases
 source $ZDOTDIR/.zshalias
-# Load Oh My ZSH
-source $ZDOTDIR/.omz
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

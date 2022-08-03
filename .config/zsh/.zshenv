@@ -3,6 +3,9 @@ export ZDOTDIR=~/.config/zsh
 export ZSH=~/.config/omz
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# GTK Theme
+export GTK_THEME="Catppuccin-green"
+
 # GPG
 export GPG_TTY=$(tty)
 

@@ -1,81 +1,83 @@
+// vim: ft=json autoindent expandtab tabstop=2 shiftwidth=2
+
 {
-    "layer": "top",
-    "position": "top",
+  "layer": "top",
+  "position": "top",
 
-    "modules-left": [
-	"sway/mode",
-    ],
+  "modules-left": [
+    "sway/mode",
+  ],
 
-    "modules-center": [
-	"sway/workspaces",
-    ],
+  "modules-center": [
+    "sway/workspaces",
+  ],
 
-    "modules-right": [
-	// "tray",
-	"battery",
-	"backlight",
-	"pulseaudio",
-	"network",
-	"clock",
-    ],
+  "modules-right": [
+    // "tray",
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "clock",
+  ],
 
-    "sway/workspaces": {
-	"disable-scroll": true,
-	"disable-click": true,
-	"format": "{name}"
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-click": true,
+    "format": "{name}"
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", ""],
+    "interval": 5
+  },
+
+  "clock": {
+    "format": "{: %I:%M %p   %d/%m/%Y}"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 20,
+      "critical": 10
     },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 5
+  },
 
-    "backlight": {
-	"format": "{icon} {percent}%",
-	"format-icons": ["", "", "", "", "", "", ""],
-	"interval": 5
-    },
-
-    "clock": {
-	"format": "{: %I:%M %p   %d/%m/%Y}"
-    },
-
-    "battery": {
-	"states": {
-	    "good": 95,
-	    "warning": 20,
-	    "critical": 10
-	},
-	"format": "{icon}  {capacity}%",
-	"format-charging": " {capacity}%",
-	"format-plugged": " {capacity}%",
-	"format-alt": "{time} {icon}",
-	"format-icons": ["", "", "", "", ""],
-	"interval": 5
-    },
-    
-    "network": {
-	"tooltip": false,
-	"format-wifi": "{icon} {essid} {ipaddr}",
-	"format-ethernet": "{icon} {ipaddr}",
-	"format-disconnected": "Disconnected",
-	"format-icons": {
-	    "ethernet": "",
-	    "wifi": "直"
-	}
-    },
-
-    "pulseaudio": {
-	"tooltip": false,
-	"scroll-step": 5,
-	"format": "{icon} {volume}%",
-	"format-muted": "婢",
-	"format-bluetooth": " {icon} {volume}%",
-	"format-icons": {
-	    "headset": "",
-	    "headphone": "",
-	    "hands-free": "",
-	    "default": ["奄", "奔", "奔", "墳", "墳"],
-	},
-	"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    },
-
-    "sway/mode": {
-	"format": " {}"
+  "network": {
+    "tooltip": false,
+    "format-wifi": "{icon} {essid} {ipaddr}",
+    "format-ethernet": "{icon} {ipaddr}",
+    "format-disconnected": "Disconnected",
+    "format-icons": {
+      "ethernet": "",
+      "wifi": "直"
     }
+  },
+
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "婢",
+    "format-bluetooth": " {icon} {volume}%",
+    "format-icons": {
+      "headset": "",
+      "headphone": "",
+      "hands-free": "",
+      "default": ["奄", "奔", "奔", "墳", "墳"],
+    },
+    "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  },
+
+  "sway/mode": {
+    "format": " {}"
+  },
 }

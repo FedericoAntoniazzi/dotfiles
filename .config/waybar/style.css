@@ -1,18 +1,22 @@
+/*
+ * vim: ft=css autoindent expandtab tabstop=2 shiftwidth=2
+ */
+
 * {
-    min-height: 15px;
+  min-height: 15px;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    border: none;
-    border-radius: 10px;
+  border: none;
+  border-radius: 10px;
 
-    font-family: "FiraCode Nerd Font";
-    font-size: 12px;
+  font-family: "FiraCode Nerd Font";
+  font-size: 12px;
 }
 
 window#waybar {
-    background: transparent;
+  background: transparent;
 }
 
 #workspaces,
@@ -23,65 +27,65 @@ window#waybar {
 #pulseaudio,
 #network,
 #clock {
-    margin: 5px 5px;
-    padding: 8px 10px;
+  margin: 5px 5px;
+  padding: 8px 10px;
 }
 
 #window {
-    color: #161320;
-    background: #89dceb;
+  color: #161320;
+  background: #89dceb;
 }
 
 #mode {
-    color: #161320;
-    background: #eba0ac;
+  color: #161320;
+  background: #eba0ac;
 }
 
 #workspaces {
-    padding: 0;
-    color: #cdd6f4;
-    background: #11111b;
+  padding: 0;
+  color: #cdd6f4;
+  background: #11111b;
 }
 #workspaces button {
-    color: inherit;
-    background: transparent;
+  color: inherit;
+  background: transparent;
 }
 #workspaces button.focused {
-    color: #313244;
-    background: #89b4fa;
-    transition: none;
+  color: #313244;
+  background: #89b4fa;
+  transition: none;
 }
 #workspaces button:hover {
-    /* 
-     * Disable strange hover effect
-     * https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect=
-     */
-    box-shadow: inherit;
-    text-shadow: inherit;
+  /* 
+   * Disable strange hover effect
+   * https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect=
+   */
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
 
 #battery {
-    color: #313244;
-    background: #cba6f7;
+  color: #313244;
+  background: #cba6f7;
 }
 
 #backlight {
-    color: #313244;
-    background: #f9e2af;
+  color: #313244;
+  background: #f9e2af;
 }
 
 #pulseaudio {
-    color: #313244;
-    background: #94e2d5;
+  color: #313244;
+  background: #94e2d5;
 }
 
 #network {
-    color: #313244;
-    background: #b4befe;
+  color: #313244;
+  background: #b4befe;
 }
 
 #clock {
-    margin-right: 10px;
-    color: #313244;
-    background: #74c7ec;
+  margin-right: 10px;
+  color: #313244;
+  background: #74c7ec;
 }

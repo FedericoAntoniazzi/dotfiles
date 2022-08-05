@@ -24,7 +24,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Set Qt to use the wayland backend
 export QT_QPA_PLATFORM=wayland
 
+# Golang
+export GOPATH="$HOME/dev/go"
+export GOBIN="$GOPATH/bin"
+
 # Add paths to PATH
 typeset -U PATH path
+path=("$path[@]" "$GOBIN")
 path=("$path[@]" "/usr/share/bcc/tools")
 export PATH

@@ -75,6 +75,7 @@
       "default": ["奄", "奔", "奔", "墳", "墳"],
     },
     "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "smooth-scrolling-threshold": 1.0,
   },
 
   "sway/mode": {

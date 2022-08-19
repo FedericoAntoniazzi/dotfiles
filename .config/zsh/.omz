@@ -10,7 +10,7 @@ DISABLE_UPDATE_PROMPT="true"
 export UPDATE_ZSH_DAY=5
 
 # Enable command correction
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Load plugins
 plugins=(

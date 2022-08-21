@@ -2,17 +2,17 @@
 
 ### Keyboard
 input "1:1:AT_Translated_Set_2_keyboard" {
-	xkb_layout "us"
-	xkb_options "compose:ralt,caps:escape_shifted_capslock"
+	xkb_layout "eu"
+	xkb_options "caps:escape_shifted_capslock"
 }
 input "1008:13121:HP_Inc._OMEN_Encoder" {
-	xkb_layout "us"
-	xkb_options "compose:ralt,caps:escape_shifted_capslock"
+	xkb_layout "eu"
+	xkb_options "caps:escape_shifted_capslock"
 	xkb_numlock enable
 }
 input "1008:13121:HP_Inc._OMEN_Encoder_Keypad" {
-	xkb_layout "us"
-	xkb_options "compose:ralt,caps:escape_shifted_capslock"
+	xkb_layout "eu"
+	xkb_options "caps:escape_shifted_capslock"
 	xkb_numlock enable
 }
 

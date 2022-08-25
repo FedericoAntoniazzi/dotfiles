@@ -1,5 +1,5 @@
 [submodule "powerlevel10k"]
-	path = /home/federico/.config/omz/custom/themes/powerlevel10k
+	path = .config/omz/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 [submodule "zsh-autosuggestions"]
 	path = /home/federico/.config/omz/custom/plugins/zsh-autosuggestions

@@ -1,16 +1,27 @@
 #!/bin/sh
 
-echo "Crating user's home directories"
-mkdir -p docs downloads media/{pics,videos}
-echo "Done!"
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
 
-os=$(cat /etc/os-release | grep "^ID=" | cut -d "=" -f 2)
-if [ "$os" = "arch" ]; then
-    echo "Make sure nice-to-have packages are installed"
-    sudo pacman -Syu --needed pacman-contrib lsd openssh
-fi
+echo "Init submodules"
+yadm submodule update --recursive --init
 
-read -rp "Install WM related packages? [Y/n]" option_install_wm_packages
-if [ "$option_install_wm_packages" = "y" ]; then
-    sudo pacman -Syu sway swaybg waybar wofi swappy slurp grim foot
+echo "Updating the yadm repo origin URL"
+yadm remote set-url origin "git@github.com:FedericoAntoniazzi/dotfiles.git"
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Linux"]; then
+	echo "Creating user's home directories"
+	mkdir -p docs downloads media/{pics,videos}
+	echo "Done!"
+
+	echo "Make sure nice-to-have packages are installed"
+	sudo pacman -Syu --needed pacman-contrib lsd openssh
+
+	read -rp "Install WM related packages? [Y/n]" option_install_wm_packages
+	if [ "$option_install_wm_packages" = "y" ]; then
+		sudo pacman -Syu sway swaybg waybar wofi swappy slurp grim foot
+	fi
 fi

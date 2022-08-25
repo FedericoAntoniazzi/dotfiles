@@ -24,6 +24,7 @@ echo "Installing ZSH plugins and themes"
 git clone --depth 1 https://github.com/romkatv/powerlevel10k.git $ZSH/custom/themes/powerlevel10k
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
 git clone --depth 1 https://github.com/zsh-users/zsh-completions $ZSH/custom/plugins/zsh-completions
+git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH/custom/plugins/zsh-syntax-highlighting
 git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search $ZSH/custom/plugins/zsh-history-substring-search
 
 system_type=$(uname -s)

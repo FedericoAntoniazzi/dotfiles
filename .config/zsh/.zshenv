@@ -29,7 +29,5 @@ export GOPATH="$HOME/dev/go"
 export GOBIN="$GOPATH/bin"
 
 # Add paths to PATH
-typeset -U PATH path
-path=("$path[@]" "$GOBIN")
-path=("$path[@]" "/usr/share/bcc/tools")
+path+=("$GOBIN" "/usr/share/bcc/tools")
 export PATH

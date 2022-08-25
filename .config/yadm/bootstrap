@@ -7,12 +7,28 @@ cd "$HOME"
 echo "Init submodules"
 yadm submodule update --recursive --init
 
-echo "Updating the yadm repo origin URL"
+echo "Update the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:FedericoAntoniazzi/dotfiles.git"
+
+echo "Update ZSH environment"
+. ~/.config/zsh/.zshenv
+
+echo "Install Oh My ZSH if not already installed"
+if [ ! -d "$ZSH" ]; then
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+	echo "Skipping..."
+fi
+
+echo "Installing ZSH plugins and themes"
+git clone --depth 1 https://github.com/romkatv/powerlevel10k.git $ZSH/custom/themes/
+git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/
+git clone --depth 1 https://github.com/zsh-users/zsh-completions $ZSH/custom/plugins/
+git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search $ZSH/custom/plugins/
 
 system_type=$(uname -s)
 
-if [ "$system_type" = "Linux"]; then
+if [ "$system_type" = "Linux" ]; then
 	echo "Creating user's home directories"
 	mkdir -p docs downloads media/{pics,videos}
 	echo "Done!"

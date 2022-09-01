@@ -23,6 +23,11 @@ alias gsw="git switch"
 alias gswc="git switch --create"
 alias gsh="git show"
 
+# Kubernetes
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+
 # Yadm
 alias ya="yadm add"
 alias yc="yadm commit"

@@ -17,6 +17,9 @@ if [ "$system_type" = "Linux" ]; then
 	export XDG_CACHE_HOME="$HOME/.cache"
 	export XDG_DATA_HOME="$HOME/.local/share"
 
+	# Enable wayland in Firefox
+	export MOZ_ENABLE_WAYLAND=1
+
 	# SSH auth sock for unlocking ssh keys only when keepassxc db is unlocked
 	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
@@ -32,5 +35,6 @@ if [ "$system_type" = "Linux" ]; then
 
 	# Add paths to PATH
 	path+=("$GOBIN" "/usr/share/bcc/tools")
+	path+=("$HOME/.local/share/JetBrains/Toolbox/scripts")
 	export PATH
 fi

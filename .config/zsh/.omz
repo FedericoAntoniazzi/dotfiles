@@ -1,3 +1,5 @@
+# vim: ft=bash
+
 CASE_SENSITIVE="false"
 
 # _ and - are interchangeable
@@ -14,9 +16,11 @@ ENABLE_CORRECTION="false"
 
 # Load plugins
 plugins=(
-    zsh-autosuggestions
-    zsh-history-substring-search
-    zsh-syntax-highlighting
+	fzf
+	gh
+	zsh-autosuggestions
+	zsh-history-substring-search
+	zsh-syntax-highlighting
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src

@@ -1,0 +1,4 @@
+export ZDOTDIR=~/.config/zsh
+# Set Oh-My-Zsh folder
+export ZSH=~/.config/omz
+export ZSH_THEME="powerlevel10k/powerlevel10k"

@@ -43,12 +43,11 @@ alias yswc="yadm switch --create"
 alias ysh="yadm show"
 
 # Ls sugar
-alias ls="lsd"
-alias l="lsd -lh"
-alias ll="lsd -lah"
-alias lls="lsd -Slah"
-alias llsr="lsd -Slahr"
-alias tree="lsd --tree"
+alias ls="exa"
+alias l="exa -lh"
+alias ll="exa -lah"
+alias lls="exa -Slah"
+alias llsr="exa -Slahr"
 
 # ZSH Utilities
 alias zshconfig="$EDITOR $ZDOTDIR/.zshrc"

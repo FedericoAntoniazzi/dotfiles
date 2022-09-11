@@ -1,0 +1,22 @@
+width=300
+height=150
+max-icon-size=64
+
+border-size=2
+border-radius=10
+
+font=FiraCode Mono 10
+
+sort=-time
+layer=overlay
+
+default-timeout=3500
+
+# Colors
+background-color=#1E1D2F
+text-color=#D9E0EE
+border-color=#96CDFB
+progress-color=over #302D41
+
+[urgency=high]
+border-color=#F8BD96

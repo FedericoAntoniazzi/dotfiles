@@ -1,0 +1,4 @@
+. $HOME/.asdf/asdf.sh
+eval "$(asdf exec direnv hook zsh)"
+
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

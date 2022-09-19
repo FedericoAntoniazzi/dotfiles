@@ -47,6 +47,8 @@ autoload -U compinit; compinit
 source $ZDOTDIR/.omz
 # Load aliases
 source $ZDOTDIR/.zshalias
+# Load specific config for environment
+source $ZDOTDIR/.zshrc_spec
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

@@ -28,6 +28,9 @@ export GOPATH="$HOME/dev/go"
 export GOBIN="$GOPATH/bin"
 
 # Add paths to PATH
-path+=("$GOBIN" "/usr/share/bcc/tools")
-path+=("$HOME/.local/share/JetBrains/Toolbox/scripts")
+path+=(
+	"$GOBIN"
+	"/usr/share/bcc/tools"
+	"$HOME/.local/share/JetBrains/Toolbox/scripts"
+)
 export PATH

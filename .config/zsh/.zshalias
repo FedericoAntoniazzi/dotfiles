@@ -49,6 +49,9 @@ alias ll="lsd -lah"
 alias lls="lsd -Slah"
 alias llsr="lsd -Slahr"
 
+# Python
+alias py=python
+
 # ZSH Utilities
 alias zshconfig="$EDITOR $ZDOTDIR/.zshrc"
 alias zshenv="$EDITOR $ZDOTDIR/.zshenv"

@@ -43,20 +43,8 @@ zstyle :compistall filename "$HOME/.config/zsh/.zshrc"
 autoload -U compinit; compinit
 #_comp_options+=(globdots)
 
-# Mappings
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-bindkey "^B" backward-word
-bindkey "^F" forward-word
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-
 # Load Oh My ZSH
 source $ZDOTDIR/.omz
-# Load VIM shortcuts
-source $ZDOTDIR/.zshrc_vi
 # Load aliases
 source $ZDOTDIR/.zshalias
 

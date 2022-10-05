@@ -53,3 +53,15 @@ source $ZDOTDIR/.zshrc_ext
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+function kubeconfig() {
+	# Use this path to find kubeconfig files
+	local dir="${1:-$PWD}"
+	# Get the config path
+	local config=$(find $dir -name "admin.conf" -print 2>/dev/null | fzf)
+	echo "Using kubeconfig $config"
+	# Setting kubeconfig
+	export KUBECONFIG="$config"
+	# Load completion
+	source <(kubectl completion zsh)
+}

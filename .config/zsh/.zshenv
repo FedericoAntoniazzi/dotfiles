@@ -1,1 +1,0 @@
-.zshenv##os.Linux

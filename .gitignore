@@ -1,2 +1,4 @@
 **/*.zwc
 **/.zcompdump*
+.config/zsh/.zshenv
+config/zsh/.zshrc_spec

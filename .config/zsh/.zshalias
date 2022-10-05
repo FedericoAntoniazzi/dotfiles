@@ -6,8 +6,9 @@ alias cal="cal --monday"
 
 # File management
 # Confirm before overwriting something
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp -i -v"
+alias mv="mv -i -v"
+alias rm="rm -i -v"
 
 # Git
 alias ga="git add"

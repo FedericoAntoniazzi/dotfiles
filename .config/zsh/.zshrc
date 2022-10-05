@@ -40,6 +40,7 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # Setup completion
 zstyle :compistall filename "$HOME/.config/zsh/.zshrc"
+zstyle ':completion:*:*:make:*' tag-order 'targets'
 autoload -U compinit; compinit
 #_comp_options+=(globdots)
 

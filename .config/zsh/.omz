@@ -18,6 +18,7 @@ ENABLE_CORRECTION="false"
 plugins=(
 	fzf
 	gh
+	nomad
 	zsh-autosuggestions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -38,6 +39,7 @@ function zvm_before_init() {
 
 function zvm_after_init() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 }
 
 # Source Oh My ZSH

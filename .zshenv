@@ -1,1 +1,2 @@
-source ~/.config/zsh/.zshenv
+ZDOTDIR=$HOME/.zsh
+. ~/.config/zsh/.zshenv

@@ -10,6 +10,12 @@ alias cp="cp -i -v"
 alias mv="mv -i -v"
 alias rm="rm -i -v"
 
+# Ansible
+alias ap="ansible-playbook"
+alias ag="ansible-galaxy"
+alias av="ansible-vault"
+alias al="ansible-lint"
+
 # Git
 alias ga="git add"
 alias gc="git commit"

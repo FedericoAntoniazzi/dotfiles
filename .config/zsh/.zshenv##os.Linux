@@ -6,6 +6,8 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 # GTK Theme
 export GTK_THEME="Catppuccin-green"
 
+export EDITOR="nvim"
+
 # XDG Dirs
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

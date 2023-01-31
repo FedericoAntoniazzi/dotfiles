@@ -3,5 +3,8 @@ export ZDOTDIR=~/.config/zsh
 export ZSH=~/.config/omz
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
-path+=("$HOME/.config/dotscripts")
+# Append to $PATH
+path+=(
+	"${KREW_ROOT:-$HOME/.krew}/bin"
+)
 export PATH

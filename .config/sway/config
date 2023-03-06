@@ -34,6 +34,7 @@ output * bg ~/.config/sway/wallpapers/cat-sound.png fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec kitty
 
     # Kill focused window
     bindsym $mod+Shift+q kill

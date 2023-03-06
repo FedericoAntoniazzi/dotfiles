@@ -59,6 +59,9 @@ alias llsr="lsd -Slahr"
 # Python
 alias py=python
 
+# Tailscale
+alias tssh="tailscale ssh"
+
 # ZSH Utilities
 alias zshconfig="$EDITOR $ZDOTDIR/.zshrc"
 alias zshenv="$EDITOR $ZDOTDIR/.zshenv"

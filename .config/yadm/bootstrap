@@ -43,3 +43,8 @@ if [ "$system_type" = "Linux" ]; then
 		sudo pacman -Syu sway swaybg waybar wofi swappy slurp grim foot
 	fi
 fi
+
+if [ "$system_type" = "Darwin" ]; then
+	echo "Installing brew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi

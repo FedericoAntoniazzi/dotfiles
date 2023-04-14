@@ -3,8 +3,12 @@ export ZDOTDIR=~/.config/zsh
 export ZSH=~/.config/omz
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_GOOGLE_ANALYTICS=1
+
 # Append to $PATH
 path+=(
 	"${KREW_ROOT:-$HOME/.krew}/bin"
+	"/usr/local/sbin" # Homebrew
 )
 export PATH

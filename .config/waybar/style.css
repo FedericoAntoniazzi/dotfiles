@@ -47,6 +47,7 @@ window#waybar {
   background: #11111b;
 }
 #workspaces button {
+  padding: 8px 10px;
   color: inherit;
   background: transparent;
 }

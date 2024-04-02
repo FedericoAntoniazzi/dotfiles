@@ -34,7 +34,8 @@
   },
 
   "clock": {
-    "format": "{: %H:%M  %d/%m/%Y}"
+    "format": " {:%H:%M  %d/%m/%Y}",
+    "interval": 60,
   },
 
   "battery": {

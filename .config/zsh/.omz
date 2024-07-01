@@ -21,8 +21,10 @@ plugins=(
 	nomad
 	zsh-autosuggestions
 	zsh-history-substring-search
+	zsh-lazyload
 	zsh-syntax-highlighting
 	zsh-vi-mode
+	zsh-no-ps2
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src

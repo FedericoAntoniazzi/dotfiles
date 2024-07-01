@@ -65,3 +65,7 @@ function kubeconfig() {
 	# Load completion
 	source <(kubectl completion zsh)
 }
+
+function kdiff() {
+	kustomize build $1 | kubectl diff -f -
+}

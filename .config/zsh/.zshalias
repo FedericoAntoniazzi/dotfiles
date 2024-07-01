@@ -34,6 +34,8 @@ alias gsh="git show"
 alias k="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
+alias kgnr='kubectl get node -o custom-columns='NAME:.metadata.name,ROLE:.metadata.labels.node\.kubernetes\.io/role,VERSION:.status.nodeInfo.kubeletVersion,ZONE:.metadata.labels.topology\.kubernetes\.io/zone,PROVIDER-ID:.spec.providerID' --sort-by ".metadata.labels.node\.kubernetes\.io/role"'
+alias wk="watch -n 1 kubectl"
 
 # Yadm
 alias ya="yadm add"
@@ -74,3 +76,7 @@ alias zshconfig="$EDITOR $ZDOTDIR/.zshrc"
 alias zshenv="$EDITOR $ZDOTDIR/.zshenv"
 alias zshalias="$EDITOR $ZDOTDIR/.zshalias"
 alias zshplugin="$EDITOR $ZDOTDIR/.zshrc_plugins"
+
+if [ "$TERM" = "xterm-kitty" ]; then
+	alias ssh="kitty +kitten ssh"
+fi

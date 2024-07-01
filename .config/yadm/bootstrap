@@ -27,6 +27,7 @@ git clone --depth 1 https://github.com/zsh-users/zsh-completions $ZSH/custom/plu
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH/custom/plugins/zsh-syntax-highlighting
 git clone --depth 1 https://github.com/zsh-users/zsh-history-substring-search $ZSH/custom/plugins/zsh-history-substring-search
 git clone --depth 1 https://github.com/jeffreytse/zsh-vi-mode $ZSH/custom/plugins/zsh-vi-mode
+git clone --depth 1 https://github.com/romkatv/zsh-no-ps2 $ZSH/custom/plugins/zsh-no-ps2
 
 system_type=$(uname -s)
 

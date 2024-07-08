@@ -34,5 +34,6 @@ path+=(
 	"$GOBIN"
 	"/usr/share/bcc/tools"
 	"$HOME/.local/share/JetBrains/Toolbox/scripts"
+	"$HOME/.krew/bin:$PATH"
 )
 export PATH

@@ -4,7 +4,7 @@ export ZSH=~/.config/omz
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # GTK Theme
-export GTK_THEME="Catppuccin-green"
+export GTK_THEME="catppuccin-mocha-teal-standard+default"
 
 export EDITOR="nvim"
 

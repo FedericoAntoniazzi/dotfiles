@@ -41,7 +41,14 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 # Setup completion
 zstyle :compistall filename "$HOME/.config/zsh/.zshrc"
 zstyle ':completion:*:*:make:*' tag-order 'targets'
-autoload -U compinit; compinit
+# Build completion system once a day
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+
 #_comp_options+=(globdots)
 
 # Load Oh My ZSH
@@ -68,4 +75,9 @@ function kubeconfig() {
 
 function kdiff() {
 	kustomize build $1 | kubectl diff -f -
+}
+
+function zsh-add-completion() {
+	echo "$1 completion zsh" ">" "$ZSH/completions/_${1}"
+	$1 completion zsh > $ZSH/completions/_${1}
 }

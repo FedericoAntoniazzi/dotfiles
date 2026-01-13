@@ -1,7 +1,0 @@
-### ZSH
-.config/zsh/*.zwc
-.config/zsh/.zcompdump*
-.config/zsh/zsh_sessions*
-# Ignore yadm alt files
-.config/zsh/.zshenv
-.config/zsh/.zshrc_ext

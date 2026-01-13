@@ -1,19 +1,14 @@
 # vim: set ft=i3config
 
+input * {
+  drag_lock disabled
+}
+
 ### Keyboard
-input "1:1:AT_Translated_Set_2_keyboard" {
-	xkb_layout "eu"
-	xkb_options "caps:escape_shifted_capslock"
-}
-input "1008:13121:HP_Inc._OMEN_Encoder" {
-	xkb_layout "eu"
-	xkb_options "caps:escape_shifted_capslock"
-	xkb_numlock enable
-}
-input "1008:13121:HP_Inc._OMEN_Encoder_Keypad" {
-	xkb_layout "eu"
-	xkb_options "caps:escape_shifted_capslock"
-	xkb_numlock enable
+input type:keyboard {
+  xkb_layout "eu"
+  xkb_options "caps:escape_shifted_capslock"
+  xkb_numlock enable
 }
 
 ### Mouse

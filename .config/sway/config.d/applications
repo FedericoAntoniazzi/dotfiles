@@ -1,6 +1,6 @@
 # vim: ft=i3config
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec telegram-desktop
+bindsym $mod+F2 exec Telegram
 
 bindsym $mod+Shift+F1 exec keepassxc
 
@@ -11,3 +11,4 @@ for_window [title="Firefox — Sharing Indicator"] {
 	floating enable
 	move to workspace 10
 }
+for_window [app_id="org.musescore.Musescore"] floating enable
